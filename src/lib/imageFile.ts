@@ -48,6 +48,28 @@ export async function fileToPreview(file: File): Promise<string> {
   }
 }
 
+/**
+ * Saves a picture as a real file in the project (`public/images/products/`) through the Vite
+ * dev-server endpoint and returns its stable root-relative URL (e.g. `/images/products/x.jpg`).
+ * When the endpoint is unavailable (production / static hosting, SVG…), the data-URL is returned
+ * unchanged so the picture is still kept in localStorage as before.
+ */
+export async function saveImageToProject(dataUrl: string): Promise<string> {
+  if (!import.meta.env.DEV || !dataUrl.startsWith('data:image/')) return dataUrl
+  try {
+    const res = await fetch('/__api/product-images', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ dataUrl }),
+    })
+    if (!res.ok) return dataUrl
+    const { url } = (await res.json()) as { url?: unknown }
+    return typeof url === 'string' && url.startsWith('/images/products/') ? url : dataUrl
+  } catch {
+    return dataUrl
+  }
+}
+
 /** Accepts http(s) links, root-relative paths and data-URL images. */
 export function isValidImageUrl(value: string): boolean {
   const v = value.trim()

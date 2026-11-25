@@ -18,6 +18,9 @@ rates live in **`src/mockData.ts`**. Keep the exported types and swap the consta
 - Product photos: drop `.jpg` files in `src/assets/products/images/` and list them on a product with
   `images: photos('05-1', '05-2')` (file `product-05-1.jpg` → `'05-1'`, first = cover). Several photos
   give a thumbnail gallery on the product page; with no `images`, an SVG icon placeholder (`icon` in `SEED_EXTRAS`) is shown.
+- Photos added from the admin form (`npm run dev`) are saved as real files in
+  `public/images/products/` (served at `/images/products/…`; commit them with the project). In a
+  static/production build there is no upload endpoint, so photos fall back to browser localStorage.
 - A product shows "Promo !" automatically when `oldPrice > price`.
 
 ## Palette (`src/index.css`)

@@ -1,6 +1,6 @@
 import { useId, useRef, useState, type DragEvent } from 'react'
 import { ImagePlus, Link2, Trash2, Upload } from 'lucide-react'
-import { fileToPreview, isValidImageUrl } from '../../lib/imageFile'
+import { fileToPreview, isValidImageUrl, saveImageToProject } from '../../lib/imageFile'
 import { inputCls, inputErrCls } from './adminStyles'
 
 interface Props {
@@ -33,7 +33,7 @@ export default function ImageSlot({ index, value, onChange }: Props) {
     setBusy(true)
     setError('')
     try {
-      onChange(await fileToPreview(file))
+      onChange(await saveImageToProject(await fileToPreview(file)))
       setUrlOpen(false)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Image illisible.')
