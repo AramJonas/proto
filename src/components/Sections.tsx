@@ -69,16 +69,16 @@ export function CategoryPills({
   return (
     <nav aria-label={t.sections.categoriesAria} className="page-container pt-4 lg:pt-6">
       {/* Mobile/tablet: swipeable row bleeding to the screen edge. Desktop: wraps, aligned with the grid. */}
-      <ul className="no-scrollbar -mx-3 flex snap-x snap-proximity gap-2 overflow-x-auto px-3 pb-1 sm:-mx-5 sm:px-5 lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0">
+      <ul className="no-scrollbar -mx-3 flex snap-x snap-proximity items-center gap-2 overflow-x-auto overflow-y-visible px-3 py-2 sm:-mx-5 sm:px-5 lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0">
         {pills.map((p) => {
           const isActive = active === p.id
           return (
-            <li key={p.id} className="shrink-0 snap-start">
+            <li key={p.id} className="flex shrink-0 snap-start items-center">
               <button
                 type="button"
                 onClick={() => onSelect(p.id)}
                 aria-pressed={isActive}
-                className={`flex h-11 items-center gap-2 whitespace-nowrap rounded-full px-4 text-sm font-bold transition-colors ${
+                className={`flex h-11 shrink-0 items-center gap-2 whitespace-nowrap rounded-full px-4 text-sm font-bold transition-colors ${
                   isActive
                     ? 'bg-primary text-white'
                     : 'bg-white text-charcoal ring-1 ring-black/10 hover:ring-primary'
