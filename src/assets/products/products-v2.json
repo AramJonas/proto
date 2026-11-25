@@ -1,0 +1,329 @@
+[
+  {
+    "id": "product-01",
+    "name": "Cordless Stick Vacuum Cleaner",
+    "price": 24500,
+    "colors": [
+      "Matte Gray",
+      "Pearl White",
+      "Cobalt Blue",
+      "Midnight Black"
+    ],
+    "description": "Lightweight cordless stick vacuum with multi-surface brush roll and HEPA filtration for everyday floors and carpets. Runs up to 50 minutes per charge and converts easily into a handheld vac.",
+    "images": [
+      "assets/products/images/product-01-1.jpg",
+      "assets/products/images/product-01-2.jpg",
+      "assets/products/images/product-01-3.jpg"
+    ]
+  },
+  {
+    "id": "product-02",
+    "name": "True HEPA Air Purifier",
+    "price": 22000,
+    "colors": [
+      "Pure White",
+      "Charcoal",
+      "Soft Gray"
+    ],
+    "description": "Three-stage filtration captures 99.97% of airborne dust, pollen, and pet dander in rooms up to 500 sq ft. Features an auto air-quality sensor and whisper-quiet sleep mode.",
+    "images": [
+      "assets/products/images/product-02-1.jpg",
+      "assets/products/images/product-02-2.jpg",
+      "assets/products/images/product-02-3.jpg"
+    ]
+  },
+  {
+    "id": "product-03",
+    "name": "Ultrasonic Cool Mist Humidifier 4.5L",
+    "price": 8500,
+    "colors": [
+      "White",
+      "Slate Blue",
+      "Matte Black"
+    ],
+    "description": "Top-fill ultrasonic humidifier delivers up to 36 hours of continuous fine mist to relieve dry indoor air. Includes built-in humidistat control and automatic shut-off when empty.",
+    "images": [
+      "assets/products/images/product-03-1.jpg",
+      "assets/products/images/product-03-2.jpg",
+      "assets/products/images/product-03-3.jpg"
+    ]
+  },
+  {
+    "id": "product-04",
+    "name": "Compact Energy-Star Dehumidifier 30-Pint",
+    "price": 34000,
+    "colors": [
+      "White",
+      "Cool Gray",
+      "Black"
+    ],
+    "description": "Removes up to 30 pints of excess moisture per day from basements, laundry rooms, and living spaces. Equipped with a removable reservoir, continuous drain hose option, and washable filter.",
+    "images": [
+      "assets/products/images/product-04-1.jpg",
+      "assets/products/images/product-04-2.jpg",
+      "assets/products/images/product-04-3.jpg"
+    ]
+  },
+  {
+    "id": "product-05",
+    "name": "Digital Air Fryer Oven 6-Quart",
+    "price": 16500,
+    "colors": [
+      "Matte Black",
+      "Brushed Stainless",
+      "Cream",
+      "Navy"
+    ],
+    "description": "Rapid 360-degree air circulation crisps meals with up to 85% less oil than traditional frying. Includes 8 one-touch presets and a dishwasher-safe nonstick basket.",
+    "images": [
+      "assets/products/images/product-05-1.jpg",
+      "assets/products/images/product-05-2.jpg",
+      "assets/products/images/product-05-3.jpg"
+    ]
+  },
+  {
+    "id": "product-06",
+    "name": "Stainless Steel Electric Gooseneck Kettle",
+    "price": 9500,
+    "colors": [
+      "Matte Black",
+      "Brushed Steel",
+      "Warm White"
+    ],
+    "description": "Variable temperature kettle heats water quickly to exact degree settings for coffee, tea, and daily kitchen use. Features a precision pour spout and 60-minute keep-warm function.",
+    "images": [
+      "assets/products/images/product-06-1.jpg",
+      "assets/products/images/product-06-2.jpg",
+      "assets/products/images/product-06-3.jpg"
+    ]
+  },
+  {
+    "id": "product-07",
+    "name": "Countertop Microwave Oven 1.1 Cu Ft",
+    "price": 19500,
+    "colors": [
+      "Stainless Steel",
+      "Matte Black",
+      "White"
+    ],
+    "description": "1000-watt countertop microwave with smart sensor reheating, 10 power levels, and a glass turntable. Compact footprint fits easily on apartment and family kitchen counters.",
+    "images": [
+      "assets/products/images/product-07-1.jpg",
+      "assets/products/images/product-07-2.jpg",
+      "assets/products/images/product-07-3.jpg"
+    ]
+  },
+  {
+    "id": "product-08",
+    "name": "Handheld Garment Steamer 1500W",
+    "price": 6800,
+    "colors": [
+      "Midnight Blue",
+      "White",
+      "Graphite",
+      "Sage"
+    ],
+    "description": "Heats up in 25 seconds to smooth wrinkles from shirts, curtains, and upholstery without an ironing board. Features a detachable 300ml water tank and anti-drip steam plate.",
+    "images": [
+      "assets/products/images/product-08-1.jpg",
+      "assets/products/images/product-08-2.jpg",
+      "assets/products/images/product-08-3.jpg"
+    ]
+  },
+  {
+    "id": "product-09",
+    "name": "Ceramic Soleplate Steam Iron",
+    "price": 6200,
+    "colors": [
+      "Navy & Silver",
+      "Black & Gold",
+      "White & Teal"
+    ],
+    "description": "Glides smoothly over cotton, linen, and synthetics with a scratch-resistant ceramic soleplate and vertical steam burst. Built-in anti-calc system and three-way auto shut-off ensure safe operation.",
+    "images": [
+      "assets/products/images/product-09-1.jpg",
+      "assets/products/images/product-09-2.jpg",
+      "assets/products/images/product-09-3.jpg"
+    ]
+  },
+  {
+    "id": "product-10",
+    "name": "Programmable Drip Coffee Maker 12-Cup",
+    "price": 9800,
+    "colors": [
+      "Brushed Stainless",
+      "Matte Black",
+      "White"
+    ],
+    "description": "24-hour programmable coffee maker brews rich batches into a thermal carafe with adjustable brew strength. Includes a reusable mesh filter and mid-brew pause-and-serve feature.",
+    "images": [
+      "assets/products/images/product-10-1.jpg",
+      "assets/products/images/product-10-2.jpg",
+      "assets/products/images/product-10-3.jpg"
+    ]
+  },
+  {
+    "id": "product-11",
+    "name": "High-Speed Countertop Blender 1200W",
+    "price": 13500,
+    "colors": [
+      "Charcoal",
+      "Silver",
+      "Matte Black",
+      "Off-White"
+    ],
+    "description": "Heavy-duty motor and hardened stainless steel blades crush ice, frozen fruit, and nuts effortlessly. Comes with a 64-ounce BPA-free pitcher and variable pulse controls.",
+    "images": [
+      "assets/products/images/product-11-1.jpg",
+      "assets/products/images/product-11-2.jpg",
+      "assets/products/images/product-11-3.jpg"
+    ]
+  },
+  {
+    "id": "product-12",
+    "name": "4-Slice Stainless Steel Toaster",
+    "price": 8200,
+    "colors": [
+      "Brushed Steel",
+      "Matte Black",
+      "Cream",
+      "Slate"
+    ],
+    "description": "Extra-wide self-centering slots accommodate thick artisan bread, bagels, and waffles with six browning levels. Dual independent control panels let you toast two settings at once.",
+    "images": [
+      "assets/products/images/product-12-1.jpg",
+      "assets/products/images/product-12-2.jpg",
+      "assets/products/images/product-12-3.jpg"
+    ]
+  },
+  {
+    "id": "product-13",
+    "name": "Smart Wi-Fi Robot Vacuum Cleaner",
+    "price": 39000,
+    "colors": [
+      "Matte Black",
+      "White",
+      "Titanium Gray"
+    ],
+    "description": "LiDAR navigation maps your home for methodical room-by-room cleaning on hardwood and low-pile rugs. Schedule cleanings via mobile app and automatically return to the charging dock.",
+    "images": [
+      "assets/products/images/product-13-1.jpg",
+      "assets/products/images/product-13-2.jpg",
+      "assets/products/images/product-13-3.jpg"
+    ]
+  },
+  {
+    "id": "product-14",
+    "name": "Oscillating Ceramic Tower Space Heater",
+    "price": 11500,
+    "colors": [
+      "Matte Black",
+      "White",
+      "Silver Gray"
+    ],
+    "description": "PTC ceramic heating warms bedrooms and home offices rapidly with wide-angle oscillation and a digital thermostat. Includes tip-over protection, overheat shut-off, and remote control.",
+    "images": [
+      "assets/products/images/product-14-1.jpg",
+      "assets/products/images/product-14-2.jpg",
+      "assets/products/images/product-14-3.jpg"
+    ]
+  },
+  {
+    "id": "product-15",
+    "name": "Quiet DC Motor Standing Pedestal Fan",
+    "price": 12000,
+    "colors": [
+      "White",
+      "Matte Black",
+      "Dove Gray"
+    ],
+    "description": "Energy-efficient DC motor delivers strong airflow across 12 speed levels while staying quiet enough for bedrooms. Features adjustable height, horizontal oscillation, and a 12-hour timer.",
+    "images": [
+      "assets/products/images/product-15-1.jpg",
+      "assets/products/images/product-15-2.jpg",
+      "assets/products/images/product-15-3.jpg"
+    ]
+  },
+  {
+    "id": "product-16",
+    "name": "Multi-Use Electric Pressure Cooker 6-Quart",
+    "price": 14500,
+    "colors": [
+      "Brushed Stainless",
+      "Black",
+      "Copper"
+    ],
+    "description": "Combines pressure cooker, slow cooker, rice cooker, steamer, and sauté pan in one countertop appliance. Features a stainless steel inner pot and 12 built-in safety mechanisms.",
+    "images": [
+      "assets/products/images/product-16-1.jpg",
+      "assets/products/images/product-16-2.jpg",
+      "assets/products/images/product-16-3.jpg"
+    ]
+  },
+  {
+    "id": "product-17",
+    "name": "Portable Countertop Dishwasher",
+    "price": 48000,
+    "colors": [
+      "White",
+      "Silver",
+      "Black"
+    ],
+    "description": "Fits up to 6 standard place settings without permanent plumbing by connecting directly to your kitchen faucet. Offers 5 wash cycles including heavy, eco, and rapid wash.",
+    "images": [
+      "assets/products/images/product-17-1.jpg",
+      "assets/products/images/product-17-2.jpg",
+      "assets/products/images/product-17-3.jpg"
+    ]
+  },
+  {
+    "id": "product-18",
+    "name": "Compact Mini Fridge 3.2 Cu Ft",
+    "price": 29500,
+    "colors": [
+      "Brushed Steel",
+      "Matte Black",
+      "White",
+      "Navy"
+    ],
+    "description": "Quiet compressor mini refrigerator with adjustable glass shelves, door beverage racks, and a separate chiller compartment. Ideal for home offices, dorms, or extra pantry storage.",
+    "images": [
+      "assets/products/images/product-18-1.jpg",
+      "assets/products/images/product-18-2.jpg",
+      "assets/products/images/product-18-3.jpg"
+    ]
+  },
+  {
+    "id": "product-19",
+    "name": "Single-Zone Induction Cooktop Burner",
+    "price": 9200,
+    "colors": [
+      "Black Glass",
+      "Silver & Black",
+      "Dark Gray"
+    ],
+    "description": "1800-watt portable induction burner heats cookware directly for fast boiling and precise temperature control. Smooth ceramic glass surface wipes clean in seconds after cooking.",
+    "images": [
+      "assets/products/images/product-19-1.jpg",
+      "assets/products/images/product-19-2.jpg",
+      "assets/products/images/product-19-3.jpg"
+    ]
+  },
+  {
+    "id": "product-20",
+    "name": "Fabric Lint & Sweater Shaver",
+    "price": 2800,
+    "colors": [
+      "Off-White",
+      "Charcoal",
+      "Sage Green",
+      "Navy"
+    ],
+    "description": "USB-rechargeable fabric shaver safely removes pills, fuzz, and lint from sweaters, blankets, and couches. Includes a protective height spacer and detachable lint collector.",
+    "images": [
+      "assets/products/images/product-20-1.jpg",
+      "assets/products/images/product-20-2.jpg",
+      "assets/products/images/product-20-3.jpg"
+    ]
+  }
+]

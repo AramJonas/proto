@@ -1,0 +1,70 @@
+import {
+  AirVent,
+  Blend,
+  Bot,
+  BrushCleaning,
+  CloudFog,
+  Coffee,
+  CookingPot,
+  Droplets,
+  Fan,
+  Feather,
+  Flame,
+  GlassWater,
+  Grid2x2,
+  Heater,
+  Leaf,
+  Lightbulb,
+  Microwave,
+  Refrigerator,
+  Sandwich,
+  Scissors,
+  Shirt,
+  ShoppingBag,
+  Soup,
+  Tag,
+  Utensils,
+  UtensilsCrossed,
+  Waves,
+  Wind,
+  type LucideIcon,
+} from 'lucide-react'
+import type { IconName } from '../mockData'
+
+/** Every icon a category / product can use (replaces the former emoji placeholders). */
+const GLYPHS: Record<IconName, LucideIcon> = {
+  'air-vent': AirVent,
+  blend: Blend,
+  bot: Bot,
+  'brush-cleaning': BrushCleaning,
+  'cloud-fog': CloudFog,
+  coffee: Coffee,
+  'cooking-pot': CookingPot,
+  droplets: Droplets,
+  fan: Fan,
+  feather: Feather,
+  flame: Flame,
+  'glass-water': GlassWater,
+  grid: Grid2x2,
+  heater: Heater,
+  leaf: Leaf,
+  lightbulb: Lightbulb,
+  microwave: Microwave,
+  refrigerator: Refrigerator,
+  sandwich: Sandwich,
+  scissors: Scissors,
+  shirt: Shirt,
+  'shopping-bag': ShoppingBag,
+  soup: Soup,
+  tag: Tag,
+  utensils: Utensils,
+  'utensils-crossed': UtensilsCrossed,
+  waves: Waves,
+  wind: Wind,
+}
+
+/** Decorative SVG icon, sized and coloured by `className` (inherits `currentColor`). */
+export default function Glyph({ name, className }: { name: IconName; className?: string }) {
+  const Icon = GLYPHS[name]
+  return <Icon aria-hidden className={className} />
+}

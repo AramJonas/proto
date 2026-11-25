@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1412 236" role="img" aria-label="moulinaxx batna">
+  <rect width="269" height="236" rx="62" fill="#FF5C00"/>
+  <path fill="#FAFAFA" fill-rule="evenodd" d="M85 23V63H160C196 63 220 90 220 130C220 172 190 198 155 198H100C70 198 52 175 52 140V70C52 48 66 31 85 23ZM85 98H155C175 98 185 112 185 130C185 150 172 163 155 163H115C98 163 85 152 85 135Z"/>
+  <g font-family="Nunito, 'Varela Round', 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="150">
+    <text x="294" y="171" textLength="711" lengthAdjust="spacingAndGlyphs" fill="#2B2E31">moulinaxx</text>
+    <text x="1026" y="171" textLength="386" lengthAdjust="spacingAndGlyphs" fill="#FF5C00">batna</text>
+  </g>
+</svg>

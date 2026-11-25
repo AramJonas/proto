@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+/* Brand palette (exact). White (#FFFFFF) is Tailwind's built-in `white`. */
+@theme {
+  --color-primary: #f36b0b; /* CTA buttons, Promo badges, active states, price accents */
+  --color-charcoal: #252525; /* announcement bar, headings, bold text, footer */
+  --color-paper: #f7f7f7; /* page background, image frames, secondary surfaces */
+
+  --font-sans: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans Arabic',
+    sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper font-sans text-charcoal antialiased;
+    margin: 0;
+  }
+  button {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid #f36b0b;
+    outline-offset: 2px;
+  }
+}
+
+/* Shared page width: every top-level block (header, hero, cards, pills, grid, footer) uses this
+   so edges line up. Fluid gutters on mobile/tablet, wide 1600px cap on desktop/ultra-wide. */
+@utility page-container {
+  @apply mx-auto w-full max-w-[1600px] px-3 sm:px-5 lg:px-8 xl:px-12;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
