@@ -130,8 +130,8 @@ export const store: StoreConfig = {
   tagline: 'Votre boutique en ligne en Algérie',
   announcement: 'Livraison dans les 58 wilayas Avec ZR Express et DHD Paiement à la livraison',
   phoneDisplay: '0773 50 62 28',
-  phoneTel: '+213555123456',
-  whatsappNumber: '213555123456',
+  phoneTel: '+213773506228',
+  whatsappNumber: '213773506228',
   email: 'contact@moulinaxx.dz',
   address: 'Batna, Algérie',
   social: {
