@@ -37,7 +37,7 @@ export interface Catalog {
 
 const arStore: Pick<StoreConfig, 'tagline' | 'announcement' | 'address'> = {
   tagline: 'متجرك الإلكتروني في الجزائر',
-  announcement: 'التوصيل إلى 58 ولاية — الدفع عند الاستلام',
+  announcement: 'التوصيل إلى 58 ولاية — الدفع عند الاستلام مع ZR Express أو DHD',
   address: ' باتنة، الجزائر',
 }
 
