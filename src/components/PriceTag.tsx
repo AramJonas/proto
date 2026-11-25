@@ -6,7 +6,7 @@ interface Props {
   size?: 'md' | 'lg'
 }
 
-/** Strikethrough old price + bold orange current price, both in د.ج. */
+/** Strikethrough old price + bold orange current price, both in DA. */
 export default function PriceTag({ price, oldPrice, size = 'md' }: Props) {
   const hasPromo = oldPrice !== undefined && oldPrice > price
   const pct = hasPromo ? Math.round((1 - price / oldPrice) * 100) : 0

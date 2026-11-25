@@ -68,12 +68,12 @@ const usePrefersReducedMotion = () =>
     () => false,
   )
 
-/** 16500 → "16 500 DA" (fr) / "16 500 د.ج" (ar), isolated LTR so Arabic never reorders the digits. */
-function money(amount: number, lang: Lang): string {
+/** 16500 → "16 500 DA" (all languages), isolated LTR so Arabic never reorders the digits. */
+function money(amount: number): string {
   const grouped = Math.round(amount)
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0')
-  return `\u2066${grouped}\u00A0${lang === 'ar' ? 'د.ج' : 'DA'}\u2069`
+  return `\u2066${grouped}\u00A0DA\u2069`
 }
 
 const SWIPE_MIN_PX = 50
@@ -382,12 +382,12 @@ function SlideView({
         <p className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
           <span className="text-2xl font-black text-[#F36B0B] lg:text-3xl">
             <span className="sr-only">{L.newPrice}</span>
-            {money(product.price, lang)}
+            {money(product.price)}
           </span>
           {oldPrice !== undefined && (
             <del className="text-base font-medium text-[#525252]/70">
               <span className="sr-only">{L.oldPrice}</span>
-              {money(oldPrice, lang)}
+              {money(oldPrice)}
             </del>
           )}
         </p>

@@ -1,6 +1,6 @@
 # Moulinaxx — storefront prototype
 
-Mobile-first React + Tailwind CSS v4 (Vite, TypeScript) COD storefront for the Algerian market (prices in د.ج).
+Mobile-first React + Tailwind CSS v4 (Vite, TypeScript) COD storefront for the Algerian market (prices in DA).
 
 ```bash
 npm install

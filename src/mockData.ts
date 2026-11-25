@@ -7,7 +7,7 @@
  * replace these constants / the store persistence with data fetched from your backend — the
  * TypeScript types below describe the exact shape the UI expects.
  *
- * All prices are integers in Algerian Dinar (د.ج / DZD).
+ * All prices are integers in Algerian Dinar (DA / DZD).
  */
 
 /* ------------------------------------------------------------------ */
@@ -95,7 +95,7 @@ export interface Product {
   title: string
   /** Price the customer pays (the promo price while a promotion is active). */
   price: number
-  /** Regular price (د.ج). Set only while a promotion is active: the card then shows a "Promo !" badge. */
+  /** Regular price (DA). Set only while a promotion is active: the card then shows a "Promo !" badge. */
   oldPrice?: number
   /** Placeholder icon, shown while the product has no photo. */
   icon: IconName
@@ -115,9 +115,9 @@ export interface Product {
 export interface Wilaya {
   code: string
   name: string
-  /** Delivery to the customer's home (د.ج). */
+  /** Delivery to the customer's home (DA). */
   homeRate: number
-  /** Pick-up at a Stop Desk / relay office (د.ج). */
+  /** Pick-up at a Stop Desk / relay office (DA). */
   deskRate: number
 }
 
@@ -174,7 +174,7 @@ export const categories: Category[] = [
 // seeded from src/store/seedProducts.ts. `Product` above is the storefront-facing view of a store product.
 
 /* ------------------------------------------------------------------ */
-/* Wilaya shipping rates (د.ج)                                         */
+/* Wilaya shipping rates (DA)                                         */
 /* ------------------------------------------------------------------ */
 
 export const wilayas: Wilaya[] = [

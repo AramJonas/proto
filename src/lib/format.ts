@@ -3,17 +3,17 @@ import { store, type Product, type Wilaya } from '../mockData'
 
 export type DeliveryType = 'home' | 'desk'
 
-/** 3 500 → "3 500 د.ج" (non-breaking spaces so the amount never wraps). Plain text, for messages. */
+/** 3 500 → "3 500 DA" (non-breaking spaces so the amount never wraps). Plain text, for messages. */
 export function formatDZDPlain(amount: number): string {
   const grouped = Math.round(amount)
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0')
-  return `${grouped}\u00A0د.ج`
+  return `${grouped}\u00A0DA`
 }
 
 /**
  * Same amount for on-screen display, wrapped in a Left-to-Right Isolate (U+2066 … U+2069) so the
- * Arabic "د.ج" can never reorder neighbouring numbers (e.g. old price next to current price).
+ * amount can never be reordered next to Arabic text (e.g. old price next to current price).
  */
 export function formatDZD(amount: number): string {
   return `\u2066${formatDZDPlain(amount)}\u2069`
