@@ -32,7 +32,9 @@ export default function LangProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
-  const dir = lang === 'ar' ? 'rtl' : 'ltr'
+  // The layout stays left-to-right in every language (Arabic text is still translated, but the
+  // header, drawer and carousel are never mirrored).
+  const dir: 'ltr' | 'rtl' = 'ltr'
 
   useLayoutEffect(() => {
     const root = document.documentElement

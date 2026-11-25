@@ -73,8 +73,8 @@ export default function MenuDrawer({ open, onClose, active, onSelect }: Props) {
         role="dialog"
         aria-modal="true"
         aria-label={t.menu.title}
-        className={`absolute inset-y-0 start-0 flex w-[85%] max-w-sm flex-col bg-white shadow-2xl transition-transform duration-300 ease-out ${
-          open ? 'translate-x-0' : '-translate-x-full rtl:translate-x-full'
+        className={`absolute inset-y-0 left-0 flex w-[85%] max-w-sm flex-col bg-white shadow-2xl transition-transform duration-300 ease-out ${
+          open ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <div className="flex h-16 shrink-0 items-center justify-between border-b border-black/5 px-4">
