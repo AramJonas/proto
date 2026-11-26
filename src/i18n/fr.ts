@@ -36,7 +36,7 @@ export const fr = {
     storeTitle: 'Notre magasin à Batna',
     storeMap: 'Voir sur Google Maps',
     storeNewTab: "(s'ouvre dans un nouvel onglet)",
-    prototype: (year: number, name: string) => `© ${year} ${name}. Prototype — données fictives.`,
+    prototype: (year: number, name: string) => `© ${year} ${name}. données fictives.`,
   },
   card: {
     promo: 'Promo !',
