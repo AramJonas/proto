@@ -93,7 +93,7 @@ export const ar: Dict = {
       address: 'أدخل بلديتك وعنوانك.',
     },
   },
-  delivery: { home: 'إلى المنزل', desk: 'مكتب Bureau' },
+  delivery: { home: 'إلى المنزل', desk: 'مكتب' },
   confirmation: {
     title: 'تم تسجيل طلبك !',
     thanksBefore: (name: string) => `شكرًا ${name}. سنتصل بك على الرقم`,
