@@ -80,7 +80,7 @@ const SWIPE_MIN_PX = 50
 const BUTTON_CLS =
   'mt-1 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#F36B0B] px-6 py-2.5 text-sm font-extrabold lg:py-3 text-white transition-colors hover:bg-[#F36B0B]/90 active:scale-[0.98] sm:w-auto sm:self-start'
 const NAV_BTN_CLS =
-  'grid size-11 place-items-center rounded-full bg-[#252525]/10 text-[#252525] transition-colors hover:bg-[#F36B0B] hover:text-white'
+  'grid size-11 place-items-center rounded-full bg-white/90 text-[#252525] shadow-sm transition-colors hover:bg-white'
 
 export default function HeroCarousel() {
   const { lang, dir, catalog } = useLang()
@@ -113,6 +113,8 @@ export default function HeroCarousel() {
 
   const paused = hovered || focused || touching
   const go = (i: number) => setIndex(((i % count) + count) % count)
+  const prevSlide = () => go(index - 1)
+  const nextSlide = () => go(index + 1)
 
   // Autoplay: a fresh timer after every slide change, so manual navigation restarts the 6 s.
   useEffect(() => {
@@ -197,22 +199,13 @@ export default function HeroCarousel() {
             </button>
           ))}
         </div>
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => go(index - 1)}
-            aria-label={L.prev}
-            className={NAV_BTN_CLS}
-          >
-            <ChevronLeftIcon className="size-5 rtl:-scale-x-100" />
+        {/* Fixed LTR row: `<` (previous) always on the left, `>` (next) always on the right. */}
+        <div dir="ltr" className="flex items-center gap-2">
+          <button type="button" onClick={prevSlide} aria-label={L.prev} className={NAV_BTN_CLS}>
+            <ChevronLeftIcon className="size-5" />
           </button>
-          <button
-            type="button"
-            onClick={() => go(index + 1)}
-            aria-label={L.next}
-            className={NAV_BTN_CLS}
-          >
-            <ChevronRightIcon className="size-5 rtl:-scale-x-100" />
+          <button type="button" onClick={nextSlide} aria-label={L.next} className={NAV_BTN_CLS}>
+            <ChevronRightIcon className="size-5" />
           </button>
         </div>
       </div>
