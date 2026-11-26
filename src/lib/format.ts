@@ -1,5 +1,6 @@
 import type { Dict } from '../i18n/fr'
 import { store, type Product, type Wilaya } from '../mockData'
+import { CARRIER_NAMES, WILAYA_TARIFFS, getRate, type Carrier } from './shippingTariffs'
 
 export type DeliveryType = 'home' | 'desk'
 
@@ -35,9 +36,16 @@ export function isPromo(product: Product): boolean {
   return discountPercent(product) > 0
 }
 
-export function shippingRate(wilaya: Wilaya | undefined, delivery: DeliveryType): number | null {
+export const carrierLabel = (c: Carrier) => CARRIER_NAMES[c]
+
+/** Fee for a wilaya / carrier / delivery type; null when no wilaya is chosen or Stop Desk is unavailable. */
+export function shippingRate(
+  wilaya: Wilaya | undefined,
+  carrier: Carrier,
+  delivery: DeliveryType,
+): number | null {
   if (!wilaya) return null
-  return delivery === 'home' ? wilaya.homeRate : wilaya.deskRate
+  return getRate(WILAYA_TARIFFS[wilaya.code], carrier, delivery)
 }
 
 export const deliveryLabel = (d: DeliveryType, t: Dict) =>
@@ -65,6 +73,7 @@ export interface OrderSnapshot {
   variant?: string
   quantity: number
   wilaya?: Wilaya
+  carrier: Carrier
   delivery: DeliveryType
   shipping: number | null
   subtotal: number
@@ -82,7 +91,7 @@ export function buildOrderText(o: OrderSnapshot, t: Dict): string {
   lines.push(`${x.quantity} : ${o.quantity}`, `${x.unitPrice} : ${formatDZDPlain(o.product.price)}`)
   if (o.wilaya && o.shipping !== null) {
     lines.push(
-      `${x.delivery} : ${deliveryLabel(o.delivery, t)} — ${o.wilaya.code} ${o.wilaya.name} (${formatDZDPlain(o.shipping)})`,
+      `${x.delivery} : ${carrierLabel(o.carrier)} · ${deliveryLabel(o.delivery, t)} — ${o.wilaya.code} ${o.wilaya.name} (${formatDZDPlain(o.shipping)})`,
     )
   }
   lines.push(

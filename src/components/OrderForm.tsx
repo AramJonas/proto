@@ -8,9 +8,10 @@ import {
   type OrderSnapshot,
 } from '../lib/format'
 import { fieldId, type CustomerErrors } from '../lib/formHelpers'
+import { DEFAULT_CARRIER, type Carrier } from '../lib/shippingTariffs'
 import type { Product } from '../mockData'
 import { CustomerFields, WilayaSelect } from './CustomerFields'
-import { DeliveryToggle, TotalBox } from './DeliveryAndTotal'
+import { CarrierToggle, DeliveryToggle, TotalBox } from './DeliveryAndTotal'
 import OrderConfirmation from './OrderConfirmation'
 import { BoundProduct, QuantityStepper, VariantPicker } from './OrderFields'
 import SocialOrderButtons from './SocialOrderButtons'
@@ -28,7 +29,8 @@ export default function OrderForm({ product, onToast }: Props) {
   const [variantIndex, setVariantIndex] = useState(0)
   const [quantity, setQuantity] = useState(1)
   const [wilayaCode, setWilayaCode] = useState('')
-  const [delivery, setDelivery] = useState<DeliveryType>('home')
+  const [carrier, setCarrier] = useState<Carrier>(DEFAULT_CARRIER)
+  const [deliveryPref, setDeliveryPref] = useState<DeliveryType>('home')
   const [fullName, setFullName] = useState('')
   const [phone, setPhone] = useState('')
   const [address, setAddress] = useState('')
@@ -39,7 +41,10 @@ export default function OrderForm({ product, onToast }: Props) {
 
   const variant = product.variants?.[variantIndex]
   const wilaya = catalog.wilayas.find((w) => w.code === wilayaCode)
-  const shipping = shippingRate(wilaya, delivery)
+  // Stop Desk not offered by this carrier in this wilaya → fall back to Domicile.
+  const deskAvailable = !wilaya || shippingRate(wilaya, carrier, 'desk') !== null
+  const delivery: DeliveryType = deskAvailable ? deliveryPref : 'home'
+  const shipping = shippingRate(wilaya, carrier, delivery)
 
   const order: OrderSnapshot = useMemo(() => {
     const subtotal = product.price * quantity
@@ -48,6 +53,7 @@ export default function OrderForm({ product, onToast }: Props) {
       variant,
       quantity,
       wilaya,
+      carrier,
       delivery,
       shipping,
       subtotal,
@@ -56,7 +62,7 @@ export default function OrderForm({ product, onToast }: Props) {
       phone,
       address,
     }
-  }, [product, variant, quantity, wilaya, delivery, shipping, fullName, phone, address])
+  }, [product, variant, quantity, wilaya, carrier, delivery, shipping, fullName, phone, address])
 
   const onSubmit = (ev: FormEvent) => {
     ev.preventDefault()
@@ -106,7 +112,13 @@ export default function OrderForm({ product, onToast }: Props) {
           <QuantityStepper value={quantity} onChange={setQuantity} />
 
           <WilayaSelect uid={uid} value={wilayaCode} error={errors.wilaya} onChange={setWilayaCode} />
-          <DeliveryToggle value={delivery} wilaya={wilaya} onChange={setDelivery} />
+          <CarrierToggle value={carrier} wilaya={wilaya} delivery={delivery} onChange={setCarrier} />
+          <DeliveryToggle
+            value={delivery}
+            wilaya={wilaya}
+            carrier={carrier}
+            onChange={setDeliveryPref}
+          />
 
           <CustomerFields
             uid={uid}

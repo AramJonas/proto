@@ -1,5 +1,5 @@
 import { useLang } from '../i18n/langContext'
-import { deliveryLabel, formatDZD, type OrderSnapshot } from '../lib/format'
+import { carrierLabel, deliveryLabel, formatDZD, type OrderSnapshot } from '../lib/format'
 import { HOME_HREF } from '../lib/useHashRoute'
 import { store } from '../mockData'
 import { CheckIcon } from './Icons'
@@ -50,6 +50,7 @@ export default function OrderConfirmation({ order, reference, onEdit }: Props) {
           label={c.shipping(deliveryLabel(delivery, t))}
           value={shipping !== null ? formatDZD(shipping) : '—'}
         />
+        <Row label={c.carrier} value={carrierLabel(order.carrier)} />
         <Row label={c.destination} value={`${wilaya?.code} ${wilaya?.name}`} />
         <Row label={c.address} value={order.address ?? ''} />
         <div className="flex items-center justify-between pt-3">
