@@ -12,7 +12,7 @@ export const CARRIERS: readonly Carrier[] = ['zr_express', 'dhd']
 export const DEFAULT_CARRIER: Carrier = 'zr_express'
 
 /** Display names (brand names, identical in FR / AR). */
-export const CARRIER_NAMES: Record<Carrier, string> = { zr_express: 'ZR Express', dhd: 'DHD Express' }
+export const CARRIER_NAMES: Record<Carrier, string> = { zr_express: 'ZR Express', dhd: 'DHD' }
 
 export interface Tariff {
   /** Home delivery (Domicile), DA. */
