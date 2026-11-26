@@ -50,7 +50,7 @@ const arHero: HeroContent = {
 
 /** Same order as `trustItems` in mockData.ts. */
 const arTrust: Pick<TrustItem, 'title' | 'text'>[] = [
-  { title: 'التوصيل إلى 58 ولاية', text: 'إلى المنزل أو مكتب Stop Desk' },
+  { title: 'التوصيل إلى 58 ولاية', text: 'إلى المنزل أو مكتب bureau' },
   { title: 'الدفع عند الاستلام', text: 'ادفع عند استلام طلبك' },
   { title: 'استبدال خلال 7 أيام', text: 'في حال وجود عيب' },
   { title: 'دعم 7/7', text: 'واتساب وهاتف' },

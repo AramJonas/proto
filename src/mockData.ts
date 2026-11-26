@@ -149,7 +149,7 @@ export const hero: HeroContent = {
 }
 
 export const trustItems: TrustItem[] = [
-  { icon: 'truck', title: 'Livraison 58 wilayas', text: 'Domicile ou Stop Desk' },
+  { icon: 'truck', title: 'Livraison 58 wilayas', text: 'Domicile ou Bureau' },
   { icon: 'cash', title: 'Paiement à la livraison', text: 'Payez à la réception' },
   { icon: 'refresh', title: 'Échange sous 7 jours', text: 'En cas de défaut' },
   { icon: 'chat', title: 'Support 7j/7', text: 'WhatsApp & téléphone' },

@@ -88,7 +88,7 @@ export const fr = {
       address: 'Entrez votre commune et adresse.',
     },
   },
-  delivery: { home: 'À domicile', desk: 'Stop Desk' },
+  delivery: { home: 'À domicile', desk: 'Bureau' },
   confirmation: {
     title: 'Commande enregistrée !',
     thanksBefore: (name: string) => `Merci ${name}. Nous vous appelons au`,
